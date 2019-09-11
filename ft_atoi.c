@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 15:34:08 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/11 15:50:49 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/11 22:46:55 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_atoi(const char *str)
 	while (*str >= '0' && *str <= '9')
 	{
 		num = num * 10 + (*str - '0');
-		if (num > num * 10)
+		if (num * 1000 < num)
 			return (neg ? 0 : -1);
 		str++;
 	}
-	return ((neg ? ((-1 * (int)num)) : (int)num));
+	return (neg ? (-1 * (int)num) : (int)num);
 }

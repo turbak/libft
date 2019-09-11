@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 13:52:28 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/11 19:19:44 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/11 21:31:06 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
-size_t				ft_strnlen(char *str, size_t size);
+size_t				ft_strnlen(const char *str, size_t size);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 char				*ft_strrev(char *s);
