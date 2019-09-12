@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 19:18:34 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/09 19:47:08 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/12 18:42:06 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 	t_list *buf;
 
 	list = lst;
-	while (list)
+	while (list && f)
 	{
 		buf = list->next;
 		f(list);

@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 16:11:17 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/08 18:25:12 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/12 18:42:02 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t buf;
+	size_t i;
 
-	buf = ft_strlen(s);
-	write(fd, s, buf);
+	if (s != NULL)
+	{
+		i = 0;
+		while (s[i])
+			i++;
+		write(fd, s, i);
+	}
 }

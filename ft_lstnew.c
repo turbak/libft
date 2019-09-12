@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 16:13:45 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/10 14:56:51 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/12 20:04:11 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		if (!(new->content = malloc(sizeof(content))))
-			return (NULL);
+		{
+			free(new);
+			new = NULL;
+			return (new);
+		}
 		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
 	}

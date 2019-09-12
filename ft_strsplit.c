@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 17:25:26 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/11 22:38:29 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/12 18:41:56 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,10 @@ static char		*ft_new(char *s, char **str, int index, char c)
 		{
 			ft_strdel(&str[j]);
 			j--;
+			str[j] = NULL;
 		}
 		free(str);
+		str = NULL;
 	}
 	return (new);
 }

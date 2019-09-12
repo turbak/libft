@@ -6,13 +6,13 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 22:07:42 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/09 22:25:16 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/12 18:41:57 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *s)
+char	*ft_strrev(const char *s)
 {
 	size_t	j;
 	size_t	i;
@@ -24,8 +24,6 @@ char	*ft_strrev(char *s)
 	j = 0;
 	i--;
 	while (i + 1 != 0)
-	{
 		rev[j++] = s[i--];
-	}
 	return (rev);
 }

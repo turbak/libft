@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 15:08:15 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/08 18:20:59 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/12 18:36:34 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,17 @@
 
 void	ft_putendl(char const *s)
 {
-	while (*s)
+	size_t i;
+
+	if (s != NULL)
 	{
-		ft_putchar(*s);
-		s++;
+		i = 0;
+		while (s[i])
+			i++;
+		if (i > 0)
+		{
+			write(1, s, i);
+			write(1, "\n", 1);
+		}
 	}
-	ft_putchar('\n');
 }

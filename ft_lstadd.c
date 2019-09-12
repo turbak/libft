@@ -6,7 +6,7 @@
 /*   By: cauranus <cauranus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 19:14:19 by cauranus          #+#    #+#             */
-/*   Updated: 2019/09/09 19:18:20 by cauranus         ###   ########.fr       */
+/*   Updated: 2019/09/12 18:42:09 by cauranus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	new->next = *alst;
-	*alst = new;
+	if (new)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }
